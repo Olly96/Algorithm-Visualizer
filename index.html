@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <script src="algorithmVisualizer.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body onload="onLoad()" style="overflow: auto;">
+  <div class="container h-25">
+    <div class="row">
+      <div class="col-3">
+        <label for="exampleFormControlSelect1">Select Algorithm</label>
+      </div>
+      <div class="col-2">
+        <label for="exampleFormControlSelect1">Dataset Type</label>
+      </div>
+      <div class="col-2">
+        <label for="exampleFormControlSelect1">Visualizer Speed</label>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-2">
+        <select id="algorithmList" class="form-control" onchange="algoChanged()">
+          <option value="ls">Linear Search</option>
+          <option value="bs">Binary Search</option>
+          <option value="ss">Selection Sort</option>
+          <option value="bbs">Bubble Sort</option>
+        </select>
+      </div>
+      <div class="col-1">
+        <button type="button" id="runBtn" onclick="runClicked()" class="btn btn-success">Run</button>
+      </div>
+
+      <div class="col-2">
+        <select class="form-control" onchange="speedChanged(event)" id="dataTypeList">
+          <option value=1>1x</option>
+          <option value=2>2x</option>
+          <option value=3>3x</option>
+          <option value=4>4x</option>
+        </select>
+      </div>
+
+      <div class="col-2">
+        <input type="number" class="form-control" id="dataSize" placeholder="50">
+      </div>
+
+      <div class="col-1">
+        <button type="button" id="generateBtn" onclick="generateClicked(event)"
+          class="btn btn-success">Generate</button>
+      </div>
+
+      <div class="col-1">
+        <button type="button" id="randomizeBtn" onclick="randomizeClicked(event)"
+          class="btn btn-success">Randomize</button>
+      </div>
+
+      <div class="col-1 ml-3">
+        <button type="button" id="sortBtn" onclick="sortClicked(event)" class="btn btn-success">Sort</button>
+      </div>
+    </div>
+    <div class="row mt-3" id="searchText">
+      <div class="col-3">
+        <label for="exampleFormControlSelect1"></label>
+      </div>
+      <div class="col-2">
+        <label for="exampleFormControlSelect1" >Search Value</label>
+      </div>
+      <div class="col-2">
+        <label for="exampleFormControlSelect1"></label>
+      </div>
+    </div>
+    <div class="row" id="searchValue">
+      <div class="col-3">
+      </div>
+      <div class="col-2">
+        <input type="number" class="form-control" id="searchInput" placeholder="50">
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div id="mainDiv" class="flex-container col-8"></div>
+    </div>
+  </div>
+  <!-- <div id="mainDiv" class="flex-container">
+  </div> -->
+  <!-- <div></div> -->
+  <!-- <div id="searchDiv" class="flex-container-search">Hello World</div> -->
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,40 @@
+.testClass{
+    color: red;
+}
+.arrayElementClass{
+    border: 1px solid lightgrey;
+    padding: 8px
+}
+.arrayElementSearchBackground{
+    background-color: yellow;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start space-between;
+    align-items: flex-end;
+}
+
+.flex-child-container{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.divChildClass{
+    align-self: baseline;
+}
+.flex-container-search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start space-between;
+    align-items: flex-start;
+}
+/* .flex-child-container-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+} */

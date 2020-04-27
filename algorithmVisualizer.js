@@ -26,6 +26,7 @@ function generateClicked() {
 }
 
 function algoChanged() {
+if(!algoRunning){
     const algoType = document.getElementById('algorithmList').value;
     if (algoType === 'ls' || algoType === 'bs') {
         document.getElementById('searchValue').style.visibility = 'visible';
@@ -41,7 +42,7 @@ function algoChanged() {
         }
         populateSpan(currentArray);
     }
-
+}
 }
 
 async function runClicked() {

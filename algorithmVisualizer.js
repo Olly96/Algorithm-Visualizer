@@ -48,6 +48,7 @@ if(!algoRunning){
 async function runClicked() {
     if(!algoRunning){
         algoRunning = true;
+        document.getElementById('algorithmList').disabled = true;
         const algoType = document.getElementById('algorithmList').value;
         if (algoType === 'ls' || algoType === 'bs') {  
             const searchVal = Number(document.getElementById('searchInput').value) === 0 ? 50 : Number(document.getElementById('searchInput').value);
@@ -57,6 +58,7 @@ async function runClicked() {
             await algoMap[algoType](currentArray);
         }
         algoRunning = false;
+        document.getElementById('algorithmList').disabled = true;
     }
 }
 

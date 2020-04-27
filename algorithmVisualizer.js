@@ -58,7 +58,7 @@ async function runClicked() {
             await algoMap[algoType](currentArray);
         }
         algoRunning = false;
-        document.getElementById('algorithmList').disabled = true;
+        document.getElementById('algorithmList').disabled = false;
     }
 }
 
